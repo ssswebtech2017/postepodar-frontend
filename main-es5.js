@@ -1,9 +1,3 @@
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"], {
   /***/
   "./$$_lazy_route_resource lazy recursive":
@@ -91,7 +85,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n<app-header></app-header>\n<router-outlet></router-outlet>\n<app-footer></app-footer>";
+    __webpack_exports__["default"] = "\n<app-header></app-header>\n<router-outlet></router-outlet>\n<app-footer></app-footer>\n<div class=\"modal\" id=\"enquiryModal\" tabindex=\"-1\" role=\"dialog\">\n    <div class=\"modal-dialog\" role=\"document\">\n      <div class=\"modal-content\">\n          \n        <form id=\"enquiryForm\">\n        <div class=\"modal-header\">\n          <h5 class=\"modal-title\">Enquiry Form</h5>\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n            <span aria-hidden=\"true\">&times;</span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n              <div class=\"form-group\">\n                <label for=\"FullName\">Full Name</label>\n                <input type=\"text\" class=\"form-control\" name=\"from_name\" placeholder=\"Enter Full Name\" />\n              </div>\n              <div class=\"form-group\">\n                <label for=\"emailName\">Email ID</label>\n                <input type=\"email\" class=\"form-control\" name=\"email_id\" placeholder=\"Enter Email Name\" />\n              </div>\n              <div class=\"form-group\">\n                <label for=\"mobile_number\">Mobile Number</label>\n                <input type=\"number\" class=\"form-control\" name=\"mobile_number\" placeholder=\"Enter Mobile Number\" />\n              </div>\n              <div class=\"form-group\">\n                <label for=\"class\">Class</label>\n                <select class=\"form-control\" name=\"class_name\">\n                    <option value=\"\">Select Class</option>\n                    <option value=\"Class1\">Class 1</option>\n                    <option value=\"Class2\">Class 2</option>\n                    <option value=\"Class3\">Class 3</option>\n                    <option value=\"Class4\">Class 4</option>\n                    <option value=\"Class5\">Class 5</option>\n                    <option value=\"Class6\">Class 6</option>\n                    <option value=\"Class7\">Class 7</option>\n                    <option value=\"Class8\">Class 8</option>\n                </select>\n              </div>\n        </div>\n        <div class=\"modal-footer\">\n            <button type=\"submit\" class=\"btn btn-primary\">Save changes</button>\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>\n        </div>\n        \n        </form>\n      </div>\n    </div>\n  </div>\n\n  \n<div class=\"modal\" id=\"enquirySuccessModal\" tabindex=\"-1\" role=\"dialog\">\n    <div class=\"modal-dialog\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-body\">\n              <p>Your enquiry is sent successfuly. Our executive we be get in touch with you soon. Thank you..!!</p>\n        </div>\n        <div class=\"modal-footer\">\n            <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>\n        </div>\n      </div>\n    </div>\n  </div>";
     /***/
   },
 
@@ -552,9 +546,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       } instanceof Array && function (d, b) {
         d.__proto__ = b;
       } || function (d, b) {
-        for (var p in b) {
-          if (b.hasOwnProperty(p)) d[p] = b[p];
-        }
+        for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
       };
 
       return _extendStatics(d, b);
@@ -575,9 +567,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         for (var s, i = 1, n = arguments.length; i < n; i++) {
           s = arguments[i];
 
-          for (var p in s) {
-            if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-          }
+          for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
         }
 
         return t;
@@ -589,9 +579,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     function __rest(s, e) {
       var t = {};
 
-      for (var p in s) {
-        if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
-      }
+      for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
 
       if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
         if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
@@ -603,9 +591,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       var c = arguments.length,
           r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
           d;
-      if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
-        if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-      }
+      if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
       return c > 3 && r && Object.defineProperty(target, key, r), r;
     }
 
@@ -678,76 +664,74 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
 
-        while (_) {
-          try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
+        while (_) try {
+          if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+          if (y = 0, t) op = [op[0] & 2, t.value];
 
-            switch (op[0]) {
-              case 0:
-              case 1:
+          switch (op[0]) {
+            case 0:
+            case 1:
+              t = op;
+              break;
+
+            case 4:
+              _.label++;
+              return {
+                value: op[1],
+                done: false
+              };
+
+            case 5:
+              _.label++;
+              y = op[1];
+              op = [0];
+              continue;
+
+            case 7:
+              op = _.ops.pop();
+
+              _.trys.pop();
+
+              continue;
+
+            default:
+              if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                _ = 0;
+                continue;
+              }
+
+              if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+                _.label = op[1];
+                break;
+              }
+
+              if (op[0] === 6 && _.label < t[1]) {
+                _.label = t[1];
                 t = op;
                 break;
+              }
 
-              case 4:
-                _.label++;
-                return {
-                  value: op[1],
-                  done: false
-                };
+              if (t && _.label < t[2]) {
+                _.label = t[2];
 
-              case 5:
-                _.label++;
-                y = op[1];
-                op = [0];
-                continue;
+                _.ops.push(op);
 
-              case 7:
-                op = _.ops.pop();
+                break;
+              }
 
-                _.trys.pop();
+              if (t[2]) _.ops.pop();
 
-                continue;
+              _.trys.pop();
 
-              default:
-                if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
-                  _ = 0;
-                  continue;
-                }
-
-                if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
-                  _.label = op[1];
-                  break;
-                }
-
-                if (op[0] === 6 && _.label < t[1]) {
-                  _.label = t[1];
-                  t = op;
-                  break;
-                }
-
-                if (t && _.label < t[2]) {
-                  _.label = t[2];
-
-                  _.ops.push(op);
-
-                  break;
-                }
-
-                if (t[2]) _.ops.pop();
-
-                _.trys.pop();
-
-                continue;
-            }
-
-            op = body.call(thisArg, _);
-          } catch (e) {
-            op = [6, e];
-            y = 0;
-          } finally {
-            f = t = 0;
+              continue;
           }
+
+          op = body.call(thisArg, _);
+        } catch (e) {
+          op = [6, e];
+          y = 0;
+        } finally {
+          f = t = 0;
         }
 
         if (op[0] & 5) throw op[1];
@@ -759,9 +743,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
 
     function __exportStar(m, exports) {
-      for (var p in m) {
-        if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-      }
+      for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
     }
 
     function __values(o) {
@@ -788,9 +770,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           e;
 
       try {
-        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) {
-          ar.push(r.value);
-        }
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
       } catch (error) {
         e = {
           error: error
@@ -807,23 +787,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
 
     function __spread() {
-      for (var ar = [], i = 0; i < arguments.length; i++) {
-        ar = ar.concat(__read(arguments[i]));
-      }
+      for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
 
       return ar;
     }
 
     function __spreadArrays() {
-      for (var s = 0, i = 0, il = arguments.length; i < il; i++) {
-        s += arguments[i].length;
-      }
+      for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
 
-      for (var r = Array(s), k = 0, i = 0; i < il; i++) {
-        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++) {
-          r[k] = a[j];
-        }
-      }
+      for (var r = Array(s), k = 0, i = 0; i < il; i++) for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++) r[k] = a[j];
 
       return r;
     }
@@ -937,9 +909,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     function __importStar(mod) {
       if (mod && mod.__esModule) return mod;
       var result = {};
-      if (mod != null) for (var k in mod) {
-        if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
-      }
+      if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
       result.default = mod;
       return result;
     }
@@ -1005,23 +975,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var AcademicSessionComponent =
-    /*#__PURE__*/
-    function () {
-      function AcademicSessionComponent() {
-        _classCallCheck(this, AcademicSessionComponent);
+    let AcademicSessionComponent = class AcademicSessionComponent {
+      constructor() {}
+
+      ngOnInit() {
+        window.scroll(0, 0);
       }
 
-      _createClass(AcademicSessionComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          window.scroll(0, 0);
-        }
-      }]);
-
-      return AcademicSessionComponent;
-    }();
-
+    };
     AcademicSessionComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-academic-session',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
@@ -1086,23 +1047,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var AdmissionProcedureComponent =
-    /*#__PURE__*/
-    function () {
-      function AdmissionProcedureComponent() {
-        _classCallCheck(this, AdmissionProcedureComponent);
+    let AdmissionProcedureComponent = class AdmissionProcedureComponent {
+      constructor() {}
+
+      ngOnInit() {
+        window.scroll(0, 0);
       }
 
-      _createClass(AdmissionProcedureComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          window.scroll(0, 0);
-        }
-      }]);
-
-      return AdmissionProcedureComponent;
-    }();
-
+    };
     AdmissionProcedureComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-admission-procedure',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
@@ -1243,7 +1195,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*! ./contactus/contactus.component */
     "./src/app/contactus/contactus.component.ts");
 
-    var routes = [{
+    const routes = [{
       path: '',
       redirectTo: 'home',
       pathMatch: 'full'
@@ -1293,11 +1245,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       path: 'contactUs',
       component: _contactus_contactus_component__WEBPACK_IMPORTED_MODULE_17__["ContactusComponent"]
     }];
-
-    var AppRoutingModule = function AppRoutingModule() {
-      _classCallCheck(this, AppRoutingModule);
-    };
-
+    let AppRoutingModule = class AppRoutingModule {};
     AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
       declarations: [_home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"], _our_mission_our_mission_component__WEBPACK_IMPORTED_MODULE_4__["OurMissionComponent"], _our_vision_our_vision_component__WEBPACK_IMPORTED_MODULE_5__["OurVisionComponent"], _student_goals_student_goals_component__WEBPACK_IMPORTED_MODULE_6__["StudentGoalsComponent"], _chairmans_desk_chairmans_desk_component__WEBPACK_IMPORTED_MODULE_7__["ChairmansDeskComponent"], _principals_desk_principals_desk_component__WEBPACK_IMPORTED_MODULE_8__["PrincipalsDeskComponent"], _classes_classes_component__WEBPACK_IMPORTED_MODULE_9__["ClassesComponent"], _why_us_why_us_component__WEBPACK_IMPORTED_MODULE_10__["WhyUsComponent"], _academic_session_academic_session_component__WEBPACK_IMPORTED_MODULE_11__["AcademicSessionComponent"], _admission_procedure_admission_procedure_component__WEBPACK_IMPORTED_MODULE_12__["AdmissionProcedureComponent"], _between_us_portal_between_us_portal_component__WEBPACK_IMPORTED_MODULE_13__["BetweenUsPortalComponent"], _teachers_teachers_component__WEBPACK_IMPORTED_MODULE_14__["TeachersComponent"], _gallery_gallery_component__WEBPACK_IMPORTED_MODULE_15__["GalleryComponent"], _career_career_component__WEBPACK_IMPORTED_MODULE_16__["CareerComponent"], _contactus_contactus_component__WEBPACK_IMPORTED_MODULE_17__["ContactusComponent"]],
       imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes)],
@@ -1358,31 +1306,45 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var AppComponent =
-    /*#__PURE__*/
-    function () {
-      function AppComponent() {
-        _classCallCheck(this, AppComponent);
-
+    let AppComponent = class AppComponent {
+      constructor() {
         this.title = 'saptagiri';
       }
 
-      _createClass(AppComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          // this.router.events.subscribe((evt) => {
-          //     if (!(evt instanceof NavigationEnd)) {
-          //         return;
-          //     }
-          //     window.scrollTo(0, 0)
-          // });
-          window.scroll(0, 0);
-        }
-      }]);
+      ngOnInit() {
+        // this.router.events.subscribe((evt) => {
+        //     if (!(evt instanceof NavigationEnd)) {
+        //         return;
+        //     }
+        //     window.scrollTo(0, 0)
+        // });
+        window.scroll(0, 0);
+        $("#enquiryModal").modal('show'); // code fragment
+        // the form id is myForm
 
-      return AppComponent;
-    }();
+        $('#enquiryForm').on('submit', function (event) {
+          event.preventDefault(); // prevent reload
 
+          var formData = new FormData(this);
+          formData.append('service_id', 'gmail');
+          formData.append('template_id', 'enquiryform');
+          formData.append('user_id', 'user_5mjBLCUbgdmXv76b1MjiG');
+          $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+            type: 'POST',
+            data: formData,
+            contentType: false,
+            processData: false // no need to parse formData to string
+
+          }).done(function () {
+            $("#enquiryModal").modal('hide');
+            $("#enquirySuccessModal").modal('show');
+          }).fail(function (error) {
+            alert('Oops... ' + JSON.stringify(error));
+          });
+        }); // code fragment
+      }
+
+    };
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-root',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
@@ -1457,10 +1419,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*! ./footer/footer.component */
     "./src/app/footer/footer.component.ts");
 
-    var AppModule = function AppModule() {
-      _classCallCheck(this, AppModule);
-    };
-
+    let AppModule = class AppModule {};
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
       declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"], _header_header_component__WEBPACK_IMPORTED_MODULE_5__["HeaderComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_6__["FooterComponent"]],
       imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"]],
@@ -1522,23 +1481,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var BetweenUsPortalComponent =
-    /*#__PURE__*/
-    function () {
-      function BetweenUsPortalComponent() {
-        _classCallCheck(this, BetweenUsPortalComponent);
+    let BetweenUsPortalComponent = class BetweenUsPortalComponent {
+      constructor() {}
+
+      ngOnInit() {
+        window.scroll(0, 0);
       }
 
-      _createClass(BetweenUsPortalComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          window.scroll(0, 0);
-        }
-      }]);
-
-      return BetweenUsPortalComponent;
-    }();
-
+    };
     BetweenUsPortalComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-between-us-portal',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
@@ -1603,23 +1553,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var CareerComponent =
-    /*#__PURE__*/
-    function () {
-      function CareerComponent() {
-        _classCallCheck(this, CareerComponent);
+    let CareerComponent = class CareerComponent {
+      constructor() {}
+
+      ngOnInit() {
+        window.scroll(0, 0);
       }
 
-      _createClass(CareerComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          window.scroll(0, 0);
-        }
-      }]);
-
-      return CareerComponent;
-    }();
-
+    };
     CareerComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-career',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
@@ -1684,23 +1625,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var ChairmansDeskComponent =
-    /*#__PURE__*/
-    function () {
-      function ChairmansDeskComponent() {
-        _classCallCheck(this, ChairmansDeskComponent);
+    let ChairmansDeskComponent = class ChairmansDeskComponent {
+      constructor() {}
+
+      ngOnInit() {
+        window.scroll(0, 0);
       }
 
-      _createClass(ChairmansDeskComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          window.scroll(0, 0);
-        }
-      }]);
-
-      return ChairmansDeskComponent;
-    }();
-
+    };
     ChairmansDeskComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-chairmans-desk',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
@@ -1765,23 +1697,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var ClassesComponent =
-    /*#__PURE__*/
-    function () {
-      function ClassesComponent() {
-        _classCallCheck(this, ClassesComponent);
+    let ClassesComponent = class ClassesComponent {
+      constructor() {}
+
+      ngOnInit() {
+        window.scroll(0, 0);
       }
 
-      _createClass(ClassesComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          window.scroll(0, 0);
-        }
-      }]);
-
-      return ClassesComponent;
-    }();
-
+    };
     ClassesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-classes',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
@@ -1846,23 +1769,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var ContactusComponent =
-    /*#__PURE__*/
-    function () {
-      function ContactusComponent() {
-        _classCallCheck(this, ContactusComponent);
+    let ContactusComponent = class ContactusComponent {
+      constructor() {}
+
+      ngOnInit() {
+        window.scroll(0, 0);
       }
 
-      _createClass(ContactusComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          window.scroll(0, 0);
-        }
-      }]);
-
-      return ContactusComponent;
-    }();
-
+    };
     ContactusComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-contactus',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
@@ -1927,23 +1841,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var FooterComponent =
-    /*#__PURE__*/
-    function () {
-      function FooterComponent() {
-        _classCallCheck(this, FooterComponent);
+    let FooterComponent = class FooterComponent {
+      constructor() {}
+
+      ngOnInit() {
+        window.scroll(0, 0);
       }
 
-      _createClass(FooterComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          window.scroll(0, 0);
-        }
-      }]);
-
-      return FooterComponent;
-    }();
-
+    };
     FooterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-footer',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
@@ -2008,23 +1913,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var GalleryComponent =
-    /*#__PURE__*/
-    function () {
-      function GalleryComponent() {
-        _classCallCheck(this, GalleryComponent);
+    let GalleryComponent = class GalleryComponent {
+      constructor() {}
+
+      ngOnInit() {
+        window.scroll(0, 0);
       }
 
-      _createClass(GalleryComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          window.scroll(0, 0);
-        }
-      }]);
-
-      return GalleryComponent;
-    }();
-
+    };
     GalleryComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-gallery',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
@@ -2089,23 +1985,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var HeaderComponent =
-    /*#__PURE__*/
-    function () {
-      function HeaderComponent() {
-        _classCallCheck(this, HeaderComponent);
+    let HeaderComponent = class HeaderComponent {
+      constructor() {}
+
+      ngOnInit() {
+        window.scroll(0, 0);
       }
 
-      _createClass(HeaderComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          window.scroll(0, 0);
-        }
-      }]);
-
-      return HeaderComponent;
-    }();
-
+    };
     HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-header',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
@@ -2170,23 +2057,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var HomeComponent =
-    /*#__PURE__*/
-    function () {
-      function HomeComponent() {
-        _classCallCheck(this, HomeComponent);
+    let HomeComponent = class HomeComponent {
+      constructor() {}
+
+      ngOnInit() {
+        window.scroll(0, 0);
       }
 
-      _createClass(HomeComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          window.scroll(0, 0);
-        }
-      }]);
-
-      return HomeComponent;
-    }();
-
+    };
     HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-home',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
@@ -2251,23 +2129,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var OurMissionComponent =
-    /*#__PURE__*/
-    function () {
-      function OurMissionComponent() {
-        _classCallCheck(this, OurMissionComponent);
+    let OurMissionComponent = class OurMissionComponent {
+      constructor() {}
+
+      ngOnInit() {
+        window.scroll(0, 0);
       }
 
-      _createClass(OurMissionComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          window.scroll(0, 0);
-        }
-      }]);
-
-      return OurMissionComponent;
-    }();
-
+    };
     OurMissionComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-our-mission',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
@@ -2332,23 +2201,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var OurVisionComponent =
-    /*#__PURE__*/
-    function () {
-      function OurVisionComponent() {
-        _classCallCheck(this, OurVisionComponent);
+    let OurVisionComponent = class OurVisionComponent {
+      constructor() {}
+
+      ngOnInit() {
+        window.scroll(0, 0);
       }
 
-      _createClass(OurVisionComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          window.scroll(0, 0);
-        }
-      }]);
-
-      return OurVisionComponent;
-    }();
-
+    };
     OurVisionComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-our-vision',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
@@ -2413,23 +2273,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var PrincipalsDeskComponent =
-    /*#__PURE__*/
-    function () {
-      function PrincipalsDeskComponent() {
-        _classCallCheck(this, PrincipalsDeskComponent);
+    let PrincipalsDeskComponent = class PrincipalsDeskComponent {
+      constructor() {}
+
+      ngOnInit() {
+        window.scroll(0, 0);
       }
 
-      _createClass(PrincipalsDeskComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          window.scroll(0, 0);
-        }
-      }]);
-
-      return PrincipalsDeskComponent;
-    }();
-
+    };
     PrincipalsDeskComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-principals-desk',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
@@ -2494,23 +2345,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var StudentGoalsComponent =
-    /*#__PURE__*/
-    function () {
-      function StudentGoalsComponent() {
-        _classCallCheck(this, StudentGoalsComponent);
+    let StudentGoalsComponent = class StudentGoalsComponent {
+      constructor() {}
+
+      ngOnInit() {
+        window.scroll(0, 0);
       }
 
-      _createClass(StudentGoalsComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          window.scroll(0, 0);
-        }
-      }]);
-
-      return StudentGoalsComponent;
-    }();
-
+    };
     StudentGoalsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-student-goals',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
@@ -2575,23 +2417,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var TeachersComponent =
-    /*#__PURE__*/
-    function () {
-      function TeachersComponent() {
-        _classCallCheck(this, TeachersComponent);
+    let TeachersComponent = class TeachersComponent {
+      constructor() {}
+
+      ngOnInit() {
+        window.scroll(0, 0);
       }
 
-      _createClass(TeachersComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          window.scroll(0, 0);
-        }
-      }]);
-
-      return TeachersComponent;
-    }();
-
+    };
     TeachersComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-teachers',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
@@ -2656,23 +2489,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var WhyUsComponent =
-    /*#__PURE__*/
-    function () {
-      function WhyUsComponent() {
-        _classCallCheck(this, WhyUsComponent);
+    let WhyUsComponent = class WhyUsComponent {
+      constructor() {}
+
+      ngOnInit() {
+        window.scroll(0, 0);
       }
 
-      _createClass(WhyUsComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          window.scroll(0, 0);
-        }
-      }]);
-
-      return WhyUsComponent;
-    }();
-
+    };
     WhyUsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-why-us',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
@@ -2714,7 +2538,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     // The list of file replacements can be found in `angular.json`.
 
 
-    var environment = {
+    const environment = {
       production: false
     };
     /*
@@ -2777,9 +2601,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["enableProdMode"])();
     }
 
-    Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_3__["AppModule"]).catch(function (err) {
-      return console.error(err);
-    });
+    Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_3__["AppModule"]).catch(err => console.error(err));
     /***/
   },
 
@@ -2794,7 +2616,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function _(module, exports, __webpack_require__) {
     module.exports = __webpack_require__(
-    /*! /Users/pankajpede/Documents/Project/School Managment/poste podar/enhancement/postepodar/src/main.ts */
+    /*! C:\Pankaj\Data\own\education\postepodar-master\postepodar-master\src\main.ts */
     "./src/main.ts");
     /***/
   }

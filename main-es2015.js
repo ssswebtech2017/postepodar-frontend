@@ -58,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<app-header></app-header>\n<router-outlet></router-outlet>\n<app-footer></app-footer>");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<app-header></app-header>\n<router-outlet></router-outlet>\n<app-footer></app-footer>\n<div class=\"modal\" id=\"enquiryModal\" tabindex=\"-1\" role=\"dialog\">\n    <div class=\"modal-dialog\" role=\"document\">\n      <div class=\"modal-content\">\n          \n        <form id=\"enquiryForm\">\n        <div class=\"modal-header\">\n          <h5 class=\"modal-title\">Enquiry Form</h5>\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n            <span aria-hidden=\"true\">&times;</span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n              <div class=\"form-group\">\n                <label for=\"FullName\">Full Name</label>\n                <input type=\"text\" class=\"form-control\" name=\"from_name\" placeholder=\"Enter Full Name\" />\n              </div>\n              <div class=\"form-group\">\n                <label for=\"emailName\">Email ID</label>\n                <input type=\"email\" class=\"form-control\" name=\"email_id\" placeholder=\"Enter Email Name\" />\n              </div>\n              <div class=\"form-group\">\n                <label for=\"mobile_number\">Mobile Number</label>\n                <input type=\"number\" class=\"form-control\" name=\"mobile_number\" placeholder=\"Enter Mobile Number\" />\n              </div>\n              <div class=\"form-group\">\n                <label for=\"class\">Class</label>\n                <select class=\"form-control\" name=\"class_name\">\n                    <option value=\"\">Select Class</option>\n                    <option value=\"Class1\">Class 1</option>\n                    <option value=\"Class2\">Class 2</option>\n                    <option value=\"Class3\">Class 3</option>\n                    <option value=\"Class4\">Class 4</option>\n                    <option value=\"Class5\">Class 5</option>\n                    <option value=\"Class6\">Class 6</option>\n                    <option value=\"Class7\">Class 7</option>\n                    <option value=\"Class8\">Class 8</option>\n                </select>\n              </div>\n        </div>\n        <div class=\"modal-footer\">\n            <button type=\"submit\" class=\"btn btn-primary\">Save changes</button>\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>\n        </div>\n        \n        </form>\n      </div>\n    </div>\n  </div>\n\n  \n<div class=\"modal\" id=\"enquirySuccessModal\" tabindex=\"-1\" role=\"dialog\">\n    <div class=\"modal-dialog\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-body\">\n              <p>Your enquiry is sent successfuly. Our executive we be get in touch with you soon. Thank you..!!</p>\n        </div>\n        <div class=\"modal-footer\">\n            <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>\n        </div>\n      </div>\n    </div>\n  </div>");
 
 /***/ }),
 
@@ -709,6 +709,28 @@ let AppComponent = class AppComponent {
         //     window.scrollTo(0, 0)
         // });
         window.scroll(0, 0);
+        $("#enquiryModal").modal('show');
+        // code fragment
+        // the form id is myForm
+        $('#enquiryForm').on('submit', function (event) {
+            event.preventDefault(); // prevent reload
+            var formData = new FormData(this);
+            formData.append('service_id', 'gmail');
+            formData.append('template_id', 'enquiryform');
+            formData.append('user_id', 'user_5mjBLCUbgdmXv76b1MjiG');
+            $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+                type: 'POST',
+                data: formData,
+                contentType: false,
+                processData: false // no need to parse formData to string
+            }).done(function () {
+                $("#enquiryModal").modal('hide');
+                $("#enquirySuccessModal").modal('show');
+            }).fail(function (error) {
+                alert('Oops... ' + JSON.stringify(error));
+            });
+        });
+        // code fragment
     }
 };
 AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -1509,9 +1531,10 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/pankajpede/Documents/Project/School Managment/poste podar/enhancement/postepodar/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Pankaj\Data\own\education\postepodar-master\postepodar-master\src\main.ts */"./src/main.ts");
 
 
 /***/ })
 
 },[[0,"runtime","vendor"]]]);
+//# sourceMappingURL=main-es2015.js.map
